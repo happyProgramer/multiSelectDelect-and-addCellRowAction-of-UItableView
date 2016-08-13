@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tM5-ak-jVo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QHT-nU-LFw">
+            <objects>
+                <navigationController id="tM5-ak-jVo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="boA-cG-08z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OQU-i6-uuS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9S8-j4-Mu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1191" y="292"/>
+        </scene>
+        <!--addList-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F1g-tr-PMm">
+                                <rect key="frame" x="251" y="114" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="n3j-3s-9jm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlI-ze-f8Z">
+                                <rect key="frame" x="247" y="158" width="105" height="30"/>
+                                <state key="normal" title="请输入任意内容"/>
+                                <connections>
+                                    <action selector="addClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sbD-xi-cpE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJo-Os-XxC">
+                                <rect key="frame" x="350.5" y="540" width="219.5" height="30"/>
+                                <color key="backgroundColor" red="0.68455437230000005" green="1" blue="0.8111183877" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="多选删除"/>
+                                <connections>
+                                    <action selector="moreDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ix-QX-119"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISi-OD-ubx">
+                                <rect key="frame" x="30" y="540" width="189.5" height="30"/>
+                                <color key="backgroundColor" red="0.68455437230000005" green="1" blue="0.8111183877" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="全选"/>
+                                <connections>
+                                    <action selector="globleBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lN5-Fg-2BQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GJo-Os-XxC" firstAttribute="leading" secondItem="ISi-OD-ubx" secondAttribute="trailing" constant="131" id="GGM-AI-h3G"/>
+                            <constraint firstItem="F1g-tr-PMm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jd1-Ri-d7B"/>
+                            <constraint firstItem="GJo-Os-XxC" firstAttribute="height" secondItem="ISi-OD-ubx" secondAttribute="height" id="M6n-uW-V07"/>
+                            <constraint firstItem="xlI-ze-f8Z" firstAttribute="top" secondItem="F1g-tr-PMm" secondAttribute="bottom" constant="14" id="R9V-r4-kLg"/>
+                            <constraint firstAttribute="trailing" secondItem="GJo-Os-XxC" secondAttribute="trailing" constant="30" id="bQQ-W1-jWR"/>
+                            <constraint firstItem="ISi-OD-ubx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="e02-OB-lvm"/>
+                            <constraint firstItem="GJo-Os-XxC" firstAttribute="width" secondItem="ISi-OD-ubx" secondAttribute="width" constant="30" id="iLN-SC-Wk2"/>
+                            <constraint firstItem="xlI-ze-f8Z" firstAttribute="centerX" secondItem="F1g-tr-PMm" secondAttribute="centerX" id="jel-2E-SQg"/>
+                            <constraint firstItem="F1g-tr-PMm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="nvM-hS-I68"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ISi-OD-ubx" secondAttribute="bottom" constant="30" id="qG2-ep-ZOj"/>
+                            <constraint firstItem="GJo-Os-XxC" firstAttribute="baseline" secondItem="ISi-OD-ubx" secondAttribute="baseline" id="zKL-Co-hH1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="addList" id="DOd-k5-LVC"/>
+                    <connections>
+                        <outlet property="deleteBtn" destination="GJo-Os-XxC" id="TdM-G3-clJ"/>
+                        <outlet property="globleBtn" destination="ISi-OD-ubx" id="Z4v-SL-OgT"/>
+                        <outlet property="textField" destination="F1g-tr-PMm" id="hg0-VW-bWc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-499" y="300"/>
+        </scene>
+    </scenes>
+</document>
